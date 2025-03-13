@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_salary_rule_report,access.salary.rule.report,model_salary_rule_report,,1,1,1,1
+access_work_entry_report,access.work.entry.report,model_work_entry_report,,1,1,1,1
+access_input_type_report,access.input.type.report,model_input_type_report,,1,1,1,1
+access_payroll_gl_report_wizard,access.payroll.gl.report.wizard,model_payroll_gl_report_wizard,,1,1,1,1
+access_salary_rule_wizard,access.salary.rule.wizard,model_salary_rule_wizard,,1,1,1,1

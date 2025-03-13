@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+     <record id="hr_department_view_form_gl_report" model="ir.ui.view">
+        <field name="name">hr.department.view.form.gl.report</field>
+        <field name="model">hr.department</field>
+        <field name="inherit_id" ref="hr.view_department_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='color']" position="after">
+                <field name="enable_report" />
+            </xpath>
+            <xpath expr="//sheet" position="inside">
+                <notebook invisible="not enable_report">
+                        <page string="Salary Rules">
+                            <button name="action_open_salary_rule_wizard" type="object" string="Add Salary Rules" class="oe_highlight"/>
+                            <field name="salary_rule_ids" nolabel="1">
+                                <tree
+                                    editable="bottom" delete="1"
+                                >
+                                    <field name="rule_id" />
+                                    <field name="gl_code" />
+                                    <field name="gl_desc" />
+                                </tree>
+                            </field>
+                        </page>
+                         <page string="Work Entry Types">
+                             <button name="action_open_work_type_wizard" type="object" string="Add Work Entry Types" class="oe_highlight"/>
+                            <field name="work_type_ids" nolabel="1">
+                                <tree
+                                    editable="bottom" delete="1"
+                                >
+                                    <field name="work_entry_type_id" />
+                                    <field name="gl_code" />
+                                    <field name="gl_desc" />
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Other Input Types">
+                             <button name="action_open_input_type_wizard" type="object" string="Add Input Types" class="oe_highlight"/>
+                            <field name="input_type_ids" nolabel="1">
+                                <tree
+                                    editable="bottom" delete="1"
+                                >
+                                    <field name="input_type_id" />
+                                    <field name="gl_code" />
+                                    <field name="gl_desc" />
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

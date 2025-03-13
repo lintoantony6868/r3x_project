@@ -1,0 +1,10 @@
+V17.0.0.1 By Linto
+    1. Created this module for Generate Payroll GL Report.
+V17.0.0.2 By Linto
+    1. No hardcoded salary rules. Now, it automatically includes salary rules where if enable GL report is set true
+V17.0.0.3 By Linto
+    1. add delete option to delete salary rules,work entry types and other input types in departmnet view
+V17.0.0.4 By Linto
+    1. allow to multi select the records when adding the GL lines
+V17.0.0.5 By Linto
+    1. concantenate department name with gl description

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_salary_rule_wizard_form" model="ir.ui.view">
+            <field name="name">salary.rule.wizard.form</field>
+            <field name="model">salary.rule.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Select Salary Rules">
+                    <group>
+                        <field name="department_id" readonly="1"/>
+                        <field name="type" invisible="1"/>
+                        <field name="rule_ids" widget="many2many_tags" invisible="type != 'rule'"/>
+                        <field name="work_entry_type_ids" widget="many2many_tags" invisible="type != 'work_entry_type'"/>
+                        <field name="input_type_ids" widget="many2many_tags" invisible="type != 'input_type'"/>
+                    </group>
+                    <footer>
+                        <button name="action_add_multiple" type="object" string="Add" class="oe_highlight"/>
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_salary_rule_wizard" model="ir.actions.act_window">
+            <field name="name">Select Salary Rules</field>
+            <field name="res_model">salary.rule.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_salary_rule_wizard_form"/>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>
