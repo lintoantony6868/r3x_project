@@ -4,7 +4,7 @@
 {
     'name': 'Payroll GL Report',
     'summary': 'Payroll GL Report',
-    'version': '17.0.0.5',
+    'version': '17.0.0.6',
     'author': 'RU3IX PTY LTD',
     'license': 'LGPL-3',
     'category' : 'Payroll',
